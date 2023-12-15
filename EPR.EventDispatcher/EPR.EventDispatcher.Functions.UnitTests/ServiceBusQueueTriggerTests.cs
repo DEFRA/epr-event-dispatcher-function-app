@@ -1,4 +1,4 @@
-﻿namespace EPR.EventDispatcher.Functions.Tests;
+﻿namespace EPR.EventDispatcher.Functions.UnitTests;
 
 using Application.Services.Interfaces;
 using Azure.Messaging.ServiceBus;

@@ -4,9 +4,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPR.EventDispatcher.Functio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPR.EventDispatcher.Application", "EPR.EventDispatcher.Application\EPR.EventDispatcher.Application.csproj", "{7CB47DF6-E6CB-45F7-AD0E-C1FD2E233327}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPR.EventDispatcher.Functions.Tests", "EPR.EventDispatcher.Functions.Tests\EPR.EventDispatcher.Functions.Tests.csproj", "{2E6BA384-17F3-409E-8A4E-3AF6A0C82230}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPR.EventDispatcher.Functions.UnitTests", "EPR.EventDispatcher.Functions.UnitTests\EPR.EventDispatcher.Functions.UnitTests.csproj", "{2E6BA384-17F3-409E-8A4E-3AF6A0C82230}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPR.EventDispatcher.Application.Tests", "EPR.EventDispatcher.Application.Tests\EPR.EventDispatcher.Application.Tests.csproj", "{FA072CE7-21BA-4F55-A3FD-2C5F01C85E18}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPR.EventDispatcher.Application.UnitTests", "EPR.EventDispatcher.Application.UnitTests\EPR.EventDispatcher.Application.UnitTests.csproj", "{FA072CE7-21BA-4F55-A3FD-2C5F01C85E18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B96113D-6D53-4EFA-A6A6-880BCCEE2374}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		stylecop.ruleset = stylecop.ruleset
+		..\README.md = ..\README.md
+		..\CONTRIBUTING.md = ..\CONTRIBUTING.md
+		..\LICENCE.md = ..\LICENCE.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

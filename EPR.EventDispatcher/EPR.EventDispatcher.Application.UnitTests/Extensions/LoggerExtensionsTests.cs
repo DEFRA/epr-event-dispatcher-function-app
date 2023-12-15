@@ -1,4 +1,4 @@
-﻿namespace EPR.EventDispatcher.Application.Tests.Extensions;
+﻿namespace EPR.EventDispatcher.Application.UnitTests.Extensions;
 
 using Application.Extensions;
 using Microsoft.Extensions.Logging;

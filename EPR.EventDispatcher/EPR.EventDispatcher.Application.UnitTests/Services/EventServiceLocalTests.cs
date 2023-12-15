@@ -1,4 +1,4 @@
-﻿namespace EPR.EventDispatcher.Application.Tests.Services;
+﻿namespace EPR.EventDispatcher.Application.UnitTests.Services;
 
 using Application.Services;
 using Application.Services.Interfaces;

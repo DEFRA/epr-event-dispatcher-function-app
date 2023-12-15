@@ -1,5 +1,8 @@
 ﻿namespace EPR.EventDispatcher.Functions.Config;
 
+using System.Diagnostics.CodeAnalysis;
+
+[ExcludeFromCodeCoverage]
 public class EventDispatcherOptions
 {
     public const string Section = "EventDispatcher";

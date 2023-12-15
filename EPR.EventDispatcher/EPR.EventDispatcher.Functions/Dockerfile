@@ -1,16 +1,29 @@
+# Use the SDK image to build your application
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS installer-env
 
-# Build requires 3.1 SDK
-COPY --from=mcr.microsoft.com/dotnet/core/sdk:3.1 /usr/share/dotnet /usr/share/dotnet
+# Copy your application source code
+COPY EPR.EventDispatcher.Functions/. ./EPR.EventDispatcher.Functions/.
+COPY EPR.EventDispatcher.Application/. ./EPR.EventDispatcher.Application/.
+COPY stylecop.ruleset ./
+COPY Directory.Build.props ./
 
-COPY . /src/dotnet-function-app
+# Build the application
+RUN dotnet publish EPR.EventDispatcher.Functions/*.csproj --output /home/site/wwwroot
 
-RUN cd /src/dotnet-function-app && \
-    mkdir -p /home/site/wwwroot && \
-    dotnet publish EPR.EventDispatcher.Functions/*.csproj --output /home/site/wwwroot
-
+# Use the Azure Functions image as the final image
 FROM mcr.microsoft.com/azure-functions/dotnet:4
+
+# Create a non-root user and set permissions
+RUN groupadd -r dotnet && \
+    useradd -r -g dotnet dotnet && \
+    chown -R dotnet /home
+
+# Switch to the non-root user for the final image
+USER dotnet
+
+# Set environment variables
 ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
     AzureFunctionsJobHost__Logging__Console__IsEnabled=true
 
-COPY --from=installer-env ["/home/site/wwwroot", "/home/site/wwwroot"]
+# Copy the published application from the installer-env image
+COPY --from=installer-env --chown=dotnet ["/home/site/wwwroot", "/home/site/wwwroot"]

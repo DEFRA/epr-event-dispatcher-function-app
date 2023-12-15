@@ -1,0 +1,6 @@
+variables:
+  azureSubscription: AZD-RWD-TST1
+  docker.imageName: eventdispatcher
+  acr.azureContainerRegistryName: tstrwdinfac1401
+  acr.repositoryName: eventdispatcherrepository
+  serviceName: TSTRWDWEBFA1401
