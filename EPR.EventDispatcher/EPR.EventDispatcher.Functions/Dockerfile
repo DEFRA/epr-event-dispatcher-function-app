@@ -13,7 +13,7 @@ RUN dotnet publish EPR.EventDispatcher.Functions/*.csproj --output /home/site/ww
 
 # Use the Azure Functions image as the final image
 # FROM defradigital/dotnetcore:dotnet8.0
-FROM mcr.microsoft.com/azure-functions/dotnet:4
+FROM mcr.microsoft.com/azure-functions/dotnet:4-dotnet8
 
 # Create a non-root user and set permissions
 RUN groupadd -r dotnet && \
