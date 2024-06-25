@@ -1,5 +1,6 @@
 # Use the SDK image to build your application
-FROM defradigital/dotnetcore-development:dotnet8.0 AS installer-env
+# FROM defradigital/dotnetcore-development:dotnet8.0 AS installer-env
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS installer-env
 
 # Copy your application source code
 COPY EPR.EventDispatcher.Functions/. ./EPR.EventDispatcher.Functions/.
@@ -11,7 +12,8 @@ COPY Directory.Build.props ./
 RUN dotnet publish EPR.EventDispatcher.Functions/*.csproj --output /home/site/wwwroot
 
 # Use the Azure Functions image as the final image
-FROM defradigital/dotnetcore:dotnet8.0
+# FROM defradigital/dotnetcore:dotnet8.0
+FROM mcr.microsoft.com/azure-functions/dotnet:4
 
 # Create a non-root user and set permissions
 RUN groupadd -r dotnet && \
