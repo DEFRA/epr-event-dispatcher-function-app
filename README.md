@@ -22,7 +22,7 @@ This function listens to an Azure ServiceBus Queue, for log messages. It will cr
 
 In order to run the service you will need the following dependencies:
 
-- .NET 6
+- .NET 8
 - Azure CLI
   
 ### Run
