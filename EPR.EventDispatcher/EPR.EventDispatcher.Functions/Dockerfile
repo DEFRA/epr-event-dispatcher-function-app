@@ -1,7 +1,6 @@
-USER root
-
 # Use the SDK image to build your application
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS installer-env
+USER root
 
 # Copy your application source code
 COPY EPR.EventDispatcher.Functions/. ./EPR.EventDispatcher.Functions/.
