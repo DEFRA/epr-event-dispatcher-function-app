@@ -1,3 +1,5 @@
+USER root
+
 # Use the SDK image to build your application
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS installer-env
 
@@ -26,4 +28,4 @@ ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
     AzureFunctionsJobHost__Logging__Console__IsEnabled=true
 
 # Copy the published application from the installer-env image
-COPY --from=installer-env --chown=dotnet ["/home/site/wwwroot", "/home/site/wwwroot"]
+COPY --from=installer-env ["/home/site/wwwroot", "/home/site/wwwroot"]
