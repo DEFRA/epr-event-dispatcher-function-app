@@ -3,4 +3,4 @@ variables:
   docker.imageName: eventdispatcher
   acr.azureContainerRegistryName: devrwdinfac1401
   acr.repositoryName: eventdispatcherrepository
-  serviceName: DEVRWDWEBFA9401
+  serviceName: DEVRWDWEBFA94mic01
