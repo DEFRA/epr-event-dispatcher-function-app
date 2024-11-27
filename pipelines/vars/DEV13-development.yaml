@@ -1,0 +1,6 @@
+variables:
+  azureSubscription: AZD-RWD-DEV13
+  docker.imageName: eventdispatcher
+  acr.azureContainerRegistryName: devrwdinfac1401
+  acr.repositoryName: eventdispatcherrepository
+  serviceName: DEVRWDWEBFAD401
