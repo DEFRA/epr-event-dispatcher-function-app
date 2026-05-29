@@ -1,5 +1,6 @@
 ﻿namespace EPR.EventDispatcher.Functions;
 
+using System.Diagnostics.CodeAnalysis;
 using Azure.Messaging.EventHubs.Producer;
 using Application.Services;
 using Application.Services.Interfaces;
@@ -10,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 
+[ExcludeFromCodeCoverage]
 public static class Program
 {
     public static async Task Main()
