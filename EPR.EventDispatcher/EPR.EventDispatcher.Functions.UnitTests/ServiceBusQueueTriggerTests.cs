@@ -3,7 +3,7 @@
 using Application.Services.Interfaces;
 using Azure.Messaging.ServiceBus;
 using FluentAssertions;
-using Microsoft.Azure.WebJobs.ServiceBus;
+using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;

@@ -15,9 +15,7 @@
     },
     "extensions": {
         "serviceBus": {
-            "messageHandlerOptions": {
-                "autoComplete": false
-            }
+            "autoCompleteMessages": false
         }
     },
     "functionTimeout": "00:01:00"
