@@ -1,12 +1,11 @@
 ﻿namespace EPR.EventDispatcher.Functions;
 
 using System.Threading.Tasks;
-using Azure.Messaging.ServiceBus;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.ServiceBus;
-using Microsoft.Extensions.Logging;
 using Application.Extensions;
 using Application.Services.Interfaces;
+using Azure.Messaging.ServiceBus;
+using Microsoft.Azure.Functions.Worker;
+using Microsoft.Extensions.Logging;
 
 public class ServiceBusQueueTrigger
 {
@@ -19,7 +18,7 @@ public class ServiceBusQueueTrigger
         _logger = logger;
     }
 
-    [FunctionName("ServiceBusQueueTrigger")]
+    [Function(nameof(ServiceBusQueueTrigger))]
     public async Task RunAsync(
         [ServiceBusTrigger("%ServiceBus:QueueName%", Connection = "ServiceBus:ConnectionString")]
         ServiceBusReceivedMessage message,
