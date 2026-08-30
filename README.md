@@ -33,6 +33,8 @@ Go to ```EPR.EventDispatcher\EPR.EventDispatcher.Functions``` directory and exec
 func start
 ```
 
+
+
 ### Docker
 
 Run in terminal at the solution source root:
