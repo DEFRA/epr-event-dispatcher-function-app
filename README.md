@@ -27,7 +27,7 @@ In order to run the service you will need the following dependencies:
   
 ### Run
 
-Go to ```EPR.EventDispatcher\EPR.EventDispatcher.Functions``` directory and execute:
+Go to ```EPR.EventDispatcher\EPR.EventDispatcher.Functions``` directory, and execute:
 
 ```
 func start
